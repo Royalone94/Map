@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LastMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-sL-dQC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="42j-qu-bWL">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-La-6Jb">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="22"/>
+                                        <state key="normal" title="direction" image="arrowshape.turn.up.left" catalog="system">
+                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DirectionBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xQv-Yr-yR6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUj-BP-93c">
+                                        <rect key="frame" x="124.5" y="0.0" width="125" height="22"/>
+                                        <state key="normal" title="Distination" image="location.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DistinationLocationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEe-Wq-pFR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXW-wL-HXe">
+                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="22"/>
+                                        <state key="normal" title="Current" image="location.north.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currentLocationBTNPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8I-Og-E8G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kFu-HI-JHm"/>
+                                </constraints>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SKx-t0-N5Y">
+                                <rect key="frame" x="20" y="44" width="374" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MapSegmentControllPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cd0-HF-uOw"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="42j-qu-bWL" secondAttribute="trailing" constant="20" id="CsU-Ig-mHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="42j-qu-bWL" secondAttribute="bottom" constant="20" id="ESF-sV-Udv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SKx-t0-N5Y" secondAttribute="trailing" constant="20" id="Iob-RH-SB6"/>
+                            <constraint firstItem="SKx-t0-N5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OFr-0x-9k5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gjc-sL-dQC" secondAttribute="trailing" id="Q05-V9-UFr"/>
+                            <constraint firstItem="Gjc-sL-dQC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QXF-45-Blf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gjc-sL-dQC" secondAttribute="bottom" id="Sex-WS-v4D"/>
+                            <constraint firstItem="SKx-t0-N5Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jPO-lM-YAW"/>
+                            <constraint firstItem="42j-qu-bWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oOv-4H-zki"/>
+                            <constraint firstItem="Gjc-sL-dQC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xU3-kA-tWy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="OT_MapView" destination="Gjc-sL-dQC" id="91i-dq-34W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <image name="location.fill" catalog="system" width="64" height="56"/>
+        <image name="location.north.fill" catalog="system" width="54" height="64"/>
+    </resources>
+</document>
