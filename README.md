@@ -3,8 +3,6 @@ it is a fully and simple map application that dealing with mapkit and corelocati
 
 ![Screen Shot 2019-11-07 at 5 06 55 PM](https://user-images.githubusercontent.com/53972048/68400963-9a56a500-0181-11ea-858c-7ec677d436b6.png)
 
-
-
 ![Screen Shot 2019-11-07 at 5 07 03 PM](https://user-images.githubusercontent.com/53972048/68400964-9a56a500-0181-11ea-93b3-c7be962b932f.png)
 
 
